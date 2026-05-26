@@ -4,14 +4,14 @@
       <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="MRB Labs Logo"/>
       <div class="navbar-vertical">
         <p class="title">MRB Labs</p>
-        <p class="secondary-text">DEV STUDIO</p>
+        <p class="tertiary-text">DEV STUDIO</p>
       </div>
     </div>
     <nav class="navbar-horizontal">
-      <button>01 // Über mich</button>
-      <button>02 // Skills</button>
-      <button>03 // Projekte</button>
-      <button>04 // Kontakt</button>
+      <button class="secondary-text">01 // Über mich</button>
+      <button class="secondary-text">02 // Skills</button>
+      <button class="secondary-text">03 // Projekte</button>
+      <button class="secondary-text">04 // Kontakt</button>
     </nav>
   </div>
 </template>
@@ -30,6 +30,13 @@
 }
 
 .secondary-text {
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+.tertiary-text {
   color: var(--text-tertiary);
   font-size: 0.7rem;
   text-align: left;
@@ -73,7 +80,6 @@ nav.navbar-horizontal {
 
 nav button {
   background-color: transparent;
-  color: var(--text-secondary);
   border: none;
   word-spacing: 0.1rem;
   transition: color 0.5s ease-in-out; 

@@ -1,5 +1,5 @@
 <template>
-  <div class="noise-overlay"/>
+  <div class="noise-overlay" />
   <div>
     <NavBar />
     <HeroSection />
