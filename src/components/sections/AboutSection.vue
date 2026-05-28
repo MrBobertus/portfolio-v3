@@ -78,7 +78,7 @@
 </template>
 
 <script setup>
-  import { Terminal, ChevronDown } from 'lucide-vue-next'
+  import { Terminal } from 'lucide-vue-next'
 </script>
 
 <style scoped>
@@ -102,12 +102,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .aboutme-keypoints {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
   }
 
   .aboutme-section-info {
@@ -143,8 +137,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 0.5rem;
+    width: 100%;
   }
 
   .aboutme-stats-field {
@@ -153,7 +148,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 180px;
+    flex: 1;
     height: 82px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-hover);
@@ -184,6 +179,7 @@
     align-items: center;
     justify-content: center;
     padding: 4rem;
+    gap: 2rem;
   }
 
   .keypoint {

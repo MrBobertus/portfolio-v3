@@ -1,8 +1,95 @@
 <template>
-  <div>
-    <!-- HeroSection -->
+  <div class="footer">
+    <div class="footer-info">
+      <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="MRB Labs Logo"/>
+      <p class="footer-studio-name">MRB Labs</p>
+      <p class="footer-copyright"><span class="footer-copyright-symbole">©</span>2026 MrBobertus</p>
+    </div>
+    <button @click="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-button-totop">ZURÜCK NACH OBEN 
+      <div class="footer-button-totop-div">
+        <ArrowUp size="14" />
+      </div>
+    </button>
   </div>
 </template>
 
 <script setup>
+  import { ArrowUp } from 'lucide-vue-next'
 </script>
+
+<style scoped>
+.footer-studio-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  margin: 0;
+  padding: 0;
+}
+
+.footer-copyright-symbole {
+  font-size: 1rem;
+  margin-right: 0.1rem;
+  text-align: center;
+}
+
+.footer-button-totop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 0.7rem;
+  text-align: center;
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.footer-button-totop:hover {
+  cursor: pointer;
+  color: var(--accent-light)
+
+}
+
+.footer-button-totop-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bg-elevated);
+  margin: 0 0 0 0.5rem;
+  padding: 0.1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo {
+  margin: 0 0.4rem 0 0;
+}
+</style>
