@@ -155,7 +155,8 @@
 }
 
 .hero-title-accent {
-  color: var(--accent-light);
+  color: var(--bg-primary);
+  text-shadow: -1px -1px 0 var(--accent-light), 1px -1px 0 var(--accent-light), -1px 1px 0 var(--accent-light), 1px 1px 0 var(--accent-light);
   margin-left: 1rem;
 }
 

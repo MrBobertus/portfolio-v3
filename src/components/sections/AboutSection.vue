@@ -119,6 +119,7 @@
     font-family: var(--font-main);
     font-weight: 700;
     font-size: 2rem;
+    margin: 0;
   }
 
   .aboutme-studio-name {
