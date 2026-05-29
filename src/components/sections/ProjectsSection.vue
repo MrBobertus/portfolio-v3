@@ -2,10 +2,10 @@
   <div class="projects">
     <div class="projects-section-info">
       <div class="line"></div>
-      <p>04 // PROJEKTE</p>
+      <p>03 // PROJEKTE</p>
     </div>
-    <p class="projects-title">Irgendwelche <span class="projects-title-keyword">Fragen</span>?</p>
-    <p class="projects-explanation">Hast du eine Frage im Kopf oder benötigtst du hilfe? Schreib mir, vielleicht kann ich ja helfen.</p>
+    <p class="projects-title">Ausgewählte <span class="projects-title-keyword">Arbeiten</span>?</p>
+    <p class="projects-explanation">Eine Auswahl meiner besten Projekte. Von Unternehmenslösungen bis hin zu innovativen Experimenten.</p>
   </div>
 </template>
 
