@@ -6,11 +6,82 @@
     </div>
     <p class="projects-title">Ausgewählte <span class="projects-title-keyword">Arbeiten</span>?</p>
     <p class="projects-explanation">Eine Auswahl meiner besten Projekte. Von Unternehmenslösungen bis hin zu innovativen Experimenten.</p>
+    <div class="project-list">
+      <div class="project-box">
+        <div class="box-top-left"></div>
+        <div class="box-bottom-right"></div>
+        <div class="button-menu">
+          <button class="button1"><FileCode :size="16" /></button>
+          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+        </div>
+        <p class="project-number">01</p>
+        <p class="project-title">Dashboard</p>
+        <p class="project-class">SAAS PLAFTFORM</p>
+        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
+        <div class="project-tech-list">
+          <p>VUE.js</p>
+          <p>Python</p>
+          <p>Javascript</p>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="box-top-left"></div>
+        <div class="box-bottom-right"></div>
+        <div class="button-menu">
+          <button class="button1"><FileCode :size="16" /></button>
+          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+        </div>
+        <p class="project-number">01</p>
+        <p class="project-title">Dashboard</p>
+        <p class="project-class">SAAS PLAFTFORM</p>
+        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
+        <div class="project-tech-list">
+          <p>VUE.js</p>
+          <p>Python</p>
+          <p>Javascript</p>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="box-top-left"></div>
+        <div class="box-bottom-right"></div>
+        <div class="button-menu">
+          <button class="button1"><FileCode :size="16" /></button>
+          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+        </div>
+        <p class="project-number">01</p>
+        <p class="project-title">Dashboard</p>
+        <p class="project-class">SAAS PLAFTFORM</p>
+        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
+        <div class="project-tech-list">
+          <p>VUE.js</p>
+          <p>Python</p>
+          <p>Javascript</p>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="box-top-left"></div>
+        <div class="box-bottom-right"></div>
+        <div class="button-menu">
+          <button class="button1"><FileCode :size="16" /></button>
+          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+        </div>
+        <p class="project-number">01</p>
+        <p class="project-title">Dashboard</p>
+        <p class="project-class">SAAS PLAFTFORM</p>
+        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
+        <div class="project-tech-list">
+          <p>VUE.js</p>
+          <p>Python</p>
+          <p>Javascript</p>
+        </div>
+      </div>
+    </div>
+    <button class="button2">ALLE PROJEKTE<ExternalLink :size="16" /></button>
   </div>
 </template>
 
 <script setup>
-  import { CodeXml } from 'lucide-vue-next'
+  import { ArrowUpRight, SquareArrowOutUpRight, FileCode, ExternalLink } from 'lucide-vue-next'
 </script>
 
 <style scoped>
@@ -46,6 +117,131 @@
 
   .projects-explanation {
     color: var(--text-secondary);
+  }
+
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .project-box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-hover);
+    padding: 2rem;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .project-number {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-title {
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-class {
+    font-family: var(--font-main);
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-description {
+    font-family: var(--font-main);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .project-tech-list p {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+    font-size: 0.7rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+
+  .button-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
+
+  .button1 {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid var(--border);
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0.6rem;
+    transition: all 0.2s ease;
+  }
+
+  .button1:hover {
+    cursor: pointer;
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+  }
+
+  .button2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    padding: 0.6rem 2rem;
+    transition: all 0.2s ease;
+  }
+
+  .button2:hover {
+    cursor: pointer;
+    border: 1px solid var(--accent-light);
+    background-color: var(--accent-light);
   }
 
   .box-top-left {
