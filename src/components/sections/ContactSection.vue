@@ -35,21 +35,21 @@
           </div>
         </div>
       </div>
-      <div class="contact-formular">
-        <form>
-          <div>
-            <div>
+      <div class="contact-section-formular">
+        <form class="contact-formular">
+          <div class="contact-data-inputs">
+            <div class="contact-name-input">
               <label>NAME</label>
               <input placeholder="Max Mustermann" />
             </div>
-            <div>
+            <div class="contact-email-input">
               <label>E-MAIL</label>
               <input placeholder="Max Mustermann" />
             </div>
           </div>
-          <div>
+          <div class="contact-message-input">
             <label>Nachricht</label>
-            <textarea placeholder="Erzähle mor mehr von ..."></textarea>
+            <textarea rows="6" placeholder="Erzähle mor mehr von ..."></textarea>
           </div>
           <button class="button1"><Send :size="16" />NACHRICHT SENDEN</button>
         </form>
@@ -198,11 +198,125 @@
     font-weight: 500;
   }
 
-  .contact-formular {
+  .contact-section-formular {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+  }
+
+  .contact-data-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 3rem;
+  }
+
+  .contact-name-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .contact-name-input label {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+
+  .contact-name-input input {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-primary);
+    font-size: 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-hover);
+    padding: 1.2rem 1.8rem;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .contact-email-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .contact-email-input label {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+
+  
+  .contact-email-input input {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-primary);
+    font-size: 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-hover);
+    padding: 1.2rem 1.8rem;
+    margin: 0;
+    gap: 0.5rem;
+  }
+  
+  .contact-message-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .contact-message-input label {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+
+
+  .contact-message-input textarea {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-primary);
+    font-size: 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-hover);
+    padding: 1.2rem 1.8rem;
+    margin: 0;
+    gap: 0.5rem;
+    resize: vertical;
   }
 
   .button1 {

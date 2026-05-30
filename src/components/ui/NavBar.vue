@@ -54,6 +54,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  z-index:99;
+  mask: linear-gradient(black, black, transparent);
+  backdrop-filter: blur(5px) brightness(0.5);
 }
 
 .navbar-horizontal {
