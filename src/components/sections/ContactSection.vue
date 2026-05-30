@@ -26,11 +26,11 @@
           <div class="contact-social-list">
             <a class="contact-social">
               <p>Github</p>
-              <ArrowUpRight :size="16" />
+              <ArrowUpRight :size="18" />
             </a>
             <a class="contact-social">
               <p>Youtube</p>
-              <ArrowUpRight :size="16" />
+              <ArrowUpRight :size="18" />
             </a>
           </div>
         </div>
@@ -44,12 +44,12 @@
             </div>
             <div class="contact-email-input">
               <label>E-MAIL</label>
-              <input placeholder="Max Mustermann" />
+              <input placeholder="maxmustermann@mail.com" />
             </div>
           </div>
           <div class="contact-message-input">
             <label>Nachricht</label>
-            <textarea rows="6" placeholder="Erzähle mor mehr von ..."></textarea>
+            <textarea rows="6" placeholder="Erzähle mir mehr von ..."></textarea>
           </div>
           <button class="button1"><Send :size="16" />NACHRICHT SENDEN</button>
         </form>
@@ -161,12 +161,14 @@
     background: none;
     padding: 0;
     margin: 0;
-    gap: 1rem;
+    gap: 0;
   }
 
-  .contact-social-section {
+  .contact-social-section-title {
     color: var(--text-tertiary);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+    padding: 0;
   }
 
   .contact-social-list {
@@ -192,7 +194,7 @@
     gap: 1rem;
   }
 
-  .contact-social p {
+  .contact-social  {
     color: var(--text-secondary);
     font-size: 1rem;
     font-weight: 500;

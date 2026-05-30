@@ -3,7 +3,7 @@
     <div class="footer-info">
       <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="MRB Labs Logo"/>
       <p class="footer-studio-name">MRB Labs</p>
-      <p class="footer-copyright"><span class="footer-copyright-symbole">©</span>2026 MrBobertus</p>
+      <p class="footer-copyright"><Copyright class="footer-copyright-symbole" size="12" />2026 MrBobertus</p>
     </div>
     <button @click="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-button-totop">ZURÜCK NACH OBEN 
       <div class="footer-button-totop-div">
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-  import { ArrowUp } from 'lucide-vue-next'
+  import { ArrowUp, Copyright } from 'lucide-vue-next'
 </script>
 
 <style scoped>

@@ -1,10 +1,10 @@
 <template>
   <div class="navbar">
     <div class="navbar-horizontal">
-      <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="MRB Labs Logo"/>
+      <div class="logo" role="img" aria-label="MRB Labs Logo"></div>
       <div class="navbar-vertical">
         <p class="title">MRB Labs</p>
-        <p class="tertiary-text">DEV STUDIO</p>
+        <p class="tertiary-text">Entwicklung. Innovation. Präzision.</p>
       </div>
     </div>
     <nav class="navbar-horizontal">
@@ -74,7 +74,11 @@
 }
 
 .logo {
+  width: 50px;
+  height: 50px;
   margin: 0 0.7rem 0 0;
+  background-color: var(--accent-light); 
+  mask: url(../../assets/logo.svg) no-repeat center / contain;
 }
 
 nav.navbar-horizontal {

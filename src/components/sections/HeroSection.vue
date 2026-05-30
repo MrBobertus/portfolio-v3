@@ -30,14 +30,13 @@
       <button class="button2">KONTAKT AUFNEHMEN</button>
     </div>
     <div class="scroll-notice">
-      SCROLL
-      <ChevronDown :size="16" />
+      <Mouse :size="22" />
     </div>
   </div>
 </template>
 
 <script setup>
-  import { Terminal, ChevronDown } from 'lucide-vue-next'
+  import { Terminal, Mouse } from 'lucide-vue-next'
 </script>
 
 <style scoped>
@@ -218,7 +217,7 @@
 
 .scroll-notice {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +226,16 @@
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 300;
+  animation: HoverEffect 5s ease-in-out infinite;
+}
+
+@keyframes HoverEffect {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
 }
 
 .line {

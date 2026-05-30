@@ -128,6 +128,7 @@
 
   .aboutme-question-answer {
     color: var(--text-secondary);
+    margin-top: 2rem;
   }
 
   .aboutme-developer-name {
@@ -141,6 +142,7 @@
     justify-content: start;
     gap: 0.5rem;
     width: 100%;
+    margin-top: 2rem;
   }
 
   .aboutme-stats-field {
@@ -190,7 +192,7 @@
     justify-content: center;
     background: var(--bg-elevated);
     border: 1px solid var(--border-hover);
-    padding: 1.5rem;
+    padding: 2rem;
     gap: 0.8rem;
   }
 
