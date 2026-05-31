@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div id="navbar" class="navbar" style="transform: translateY(-100px);">
     <div class="navbar-horizontal">
       <div class="logo" role="img" aria-label="MRB Labs Logo"></div>
       <div class="navbar-vertical">
@@ -17,6 +17,20 @@
 </template>
 
 <script setup>
+  import { ref, onMounted } from 'vue'
+  import { Terminal, Mouse } from 'lucide-vue-next'
+
+  onMounted(() => {
+    const navbar = document.getElementById("navbar")
+
+    const showNavbar = () => {
+      setTimeout(() => {
+        navbar.style.transform = 'translateY(0)';
+      }, 200);
+    }
+    
+    showNavbar()
+  })
 </script>
 
 <style scoped>
@@ -57,6 +71,7 @@
   z-index:99;
   mask: linear-gradient(black, black, transparent);
   backdrop-filter: blur(5px) brightness(0.5);
+  transition: all 0.5s ease;
 }
 
 .navbar-horizontal {

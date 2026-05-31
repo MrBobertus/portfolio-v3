@@ -20,10 +20,12 @@
       <p>DEVELOPER</p>
       <div class="line line-reverse" />
     </div>
-  <div class="hero-dev-name"><p>MrBobertus</p></div>
+    <div class="hero-dev-name">
+      <p>MrBobertus</p>
+    </div>
     <div class="hero-notation-points">
       <Terminal :size="16" />
-      <p>Entwicklung. Innovation. Präzision.<span class="hero-notation-point-cursor">_</span></p>
+      <p>{{ mottoText }}</p><span class="hero-notation-point-cursor">_</span>
     </div>
     <div class="button-div">
       <button class="button1">PROJEKTE ANSEHEN</button>
@@ -36,7 +38,26 @@
 </template>
 
 <script setup>
+  import { ref, onMounted } from 'vue'
   import { Terminal, Mouse } from 'lucide-vue-next'
+
+  const mottoText = ref('')
+  const fullText = "Entwicklung. Innovation. Präzision."
+  const typingSpeed = 50
+
+  onMounted(() => {
+    let i = 0
+    
+    const typeWriter = () => {
+      if (i < fullText.length) {
+        mottoText.value += fullText.charAt(i)
+        i++
+        setTimeout(typeWriter, typingSpeed)
+      }
+    }
+
+    typeWriter()
+  })
 </script>
 
 <style scoped>
@@ -67,6 +88,7 @@
   border: 1px solid var(--border-hover);
   padding: 0.4rem;
   margin-top: 0.5rem;
+  opacity: 0; transform: scale(0.9); animation: scaleInAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-title-middle-box {
@@ -112,7 +134,6 @@
   border-right: 1px solid var(--accent);
 }
 
-
 .hero-title-inner-box {
   background-color: var(--bg-elevated);
   border: 1px solid var(--border-hover);
@@ -138,6 +159,7 @@
   font-family: var(--font-mono);
   font-size: 0.65rem;
   margin-top: 1rem;
+  opacity: 0; 
 }
 
 .hero-dev-name {
@@ -176,6 +198,7 @@
 
 .hero-notation-point-cursor {
   color: var(--accent);
+  animation: blink 1s step-end infinite;
 }
 
 .button-div {
@@ -229,15 +252,6 @@
   animation: HoverEffect 5s ease-in-out infinite;
 }
 
-@keyframes HoverEffect {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-18px);
-  }
-}
-
 .line {
   height: 1px;
   width: 2rem;
@@ -253,11 +267,6 @@
   height: 6px;
   border-radius: 50%;
   background-color: var(--accent-light);
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  animation: blink 2s infinite;
 }
 </style>
