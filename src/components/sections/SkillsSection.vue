@@ -6,50 +6,58 @@
     </div>
     <p class="skill-title">Die <span class="skill-title-keyword">Technologien</span> mit den ich arbeite.</p>
     <p class="skill-explanation">Hier ist eine Auswahl der Technologien und Tools, mit denen ich Projekte entwickle und zum Leben erwecke.</p>
-      <div class="skill-container">
-        <p class="skill-section-title"><codeXml :size="16" class="skill-section-icon" />FRONTEND</p>
-        <div class="skill-list">
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">HTML</p>
+      <div class="skill-container-list">
+        <div class="skill-container">
+          <div class="skill-container-header">
+            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-header-text">
+              <p class="skill-container-title">FRONTEND</p>
+              <p class="skill-container-info">Moderne, performante Interfaces</p>
+            </div>
           </div>
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">VUE.js</p>
-          </div>
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">Javascript</p>
+          <div class="skill-list">
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Tailwind CSS</p>
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Vue.js</p>
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />HTML / CSS / JS</p>
           </div>
         </div>
-        <p class="skill-section-title"><codeXml :size="16" class="skill-section-icon" />BACKEND</p>
-        <div class="skill-list">
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">Java</p>
+        <div class="skill-container">
+          <div class="skill-container-header">
+            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-header-text">
+              <p class="skill-container-title">BACKEND</p>
+              <p class="skill-container-info">Robuste API's & Datenbanken</p>
+            </div>
           </div>
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">Python</p>
+          <div class="skill-list">
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Node.js</p>
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Python</p>
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Lua</p>
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Java</p>
           </div>
         </div>
-        <p class="skill-section-title"><codeXml :size="16" class="skill-section-icon" />TOOLS & SONSTIGES</p>
-        <div class="skill-list">
-          <div class="skill-box">
-            <div class="box-top-left"></div>
-            <div class="box-bottom-right"></div>
-            <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="Skill Icon"/>
-            <p class="skill-name">Photoshop</p>
+        <div class="skill-container">
+          <div class="skill-container-header">
+            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-header-text">
+              <p class="skill-container-title">TOOLS & DEVOPS</p>
+              <p class="skill-container-info">Workflows & Infrastruktur</p>
+            </div>
+          </div>
+          <div class="skill-list">
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Git / Github</p>
+          </div>
+        </div>
+        <div class="skill-container">
+          <div class="skill-container-header">
+            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-header-text">
+              <p class="skill-container-title">DESIGN</p>
+              <p class="skill-container-info">UI/UX & Visuelle Systeme</p>
+            </div>
+          </div>
+          <div class="skill-list">
+            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Adobe Suite</p>
           </div>
         </div>
       </div>
@@ -95,71 +103,89 @@
     color: var(--text-secondary);
   }
 
-  .skill-section-icon {
-    margin-right: 0.5rem;
-  }
-
-  .skill-section-title {
-    font-size: 1.4rem;
-    text-align: center;
+  .skill-container-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
   }
 
   .skill-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-
-  .skill-box {
-    display: flex;
     position: relative;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     flex: 1;
     background: var(--bg-elevated);
-    border: 1px solid var(--border-hover);
-    padding: 0.3rem 1.2rem;
+    border: 1px solid var(--border);
+    padding: 2.2rem;
     margin: 0;
     gap: 1rem;
   }
 
+  .skill-container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .skill-container-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .skill-container-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.5rem;
+  }
+
+  .skill-container-title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .skill-container-info {
+    color: var(--text-tertiary);
+    font-size: 0.65rem;
+    margin: 0;
+    text-align: left;
+  }
+
   .skill-name {
-    color: var(--text-primary);
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-hover);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0;
   }
 
-  .box-top-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    width: 10px;
-    border-top: 1px solid var(--accent);
-    border-left: 1px solid var(--accent);
-  }
-  .box-bottom-right {
-    position: absolute;
-    bottom: 0;
-    right: 0;  
-    height: 10px;
-    width: 10px;
-    border-bottom: 1px solid var(--accent);
-    border-right: 1px solid var(--accent);
+  .skill-icon {
+    color: var(--text-tertiary);
+    margin-right: 0.5rem;
   }
 
-  .logo {
-    padding: 0.3rem;
+  .skill-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
   }
 
   .line {

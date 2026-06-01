@@ -8,10 +8,10 @@
       </div>
     </div>
     <nav class="navbar-horizontal">
-      <button class="secondary-text">01 // Über mich</button>
-      <button class="secondary-text">02 // Skills</button>
-      <button class="secondary-text">03 // Projekte</button>
-      <button class="secondary-text">04 // Kontakt</button>
+      <button @click="emit('scroll-to-aboutme')" class="secondary-text">01 // Über mich</button>
+      <button @click="emit('scroll-to-skills')" class="secondary-text">02 // Skills</button>
+      <button @click="emit('scroll-to-projects')" class="secondary-text">03 // Projekte</button>
+      <button @click="emit('scroll-to-contact')" class="secondary-text">04 // Kontakt</button>
     </nav>
   </div>
 </template>
@@ -19,6 +19,8 @@
 <script setup>
   import { ref, onMounted } from 'vue'
   import { Terminal, Mouse } from 'lucide-vue-next'
+
+  const emit = defineEmits(['scroll-to-aboutme','scroll-to-skills','scroll-to-projects','scroll-to-contact'])
 
   onMounted(() => {
     const navbar = document.getElementById("navbar")

@@ -1,11 +1,11 @@
 <template>
   <div class="footer">
     <div class="footer-info">
-      <img class="logo" src="https://placehold.co/400" width="50" height="50" alt="MRB Labs Logo"/>
+      <div class="logo" role="img" aria-label="MRB Labs Logo"></div>
       <p class="footer-studio-name">MRB Labs</p>
       <p class="footer-copyright"><Copyright class="footer-copyright-symbole" size="12" />2026 MrBobertus</p>
     </div>
-    <button @click="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-button-totop">ZURÜCK NACH OBEN 
+    <button @click="scrollToTop" class="footer-button-totop">ZURÜCK NACH OBEN 
       <div class="footer-button-totop-div">
         <ArrowUp size="14" />
       </div>
@@ -15,6 +15,10 @@
 
 <script setup>
   import { ArrowUp, Copyright } from 'lucide-vue-next'
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 </script>
 
 <style scoped>
@@ -90,6 +94,11 @@
 }
 
 .logo {
-  margin: 0 0.4rem 0 0;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  background-color: var(--accent-light); 
+  mask: url(../../assets/logo.svg) no-repeat center / contain;
 }
 </style>

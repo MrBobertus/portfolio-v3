@@ -24,11 +24,11 @@
         <div class="contact-social-section">
           <p class="contact-social-section-title">SOCIALS</p>
           <div class="contact-social-list">
-            <a class="contact-social">
+            <a href="https://github.com/MrBobertus" class="contact-social">
               <p>Github</p>
               <ArrowUpRight :size="18" />
             </a>
-            <a class="contact-social">
+            <a href="https://www.youtube.com/@MrBobertus" class="contact-social">
               <p>Youtube</p>
               <ArrowUpRight :size="18" />
             </a>
@@ -192,12 +192,15 @@
     padding: 0.4rem 1.6rem;
     margin: 0;
     gap: 1rem;
-  }
-
-  .contact-social  {
     color: var(--text-secondary);
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .contact-social:hover  {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
   }
 
   .contact-section-formular {

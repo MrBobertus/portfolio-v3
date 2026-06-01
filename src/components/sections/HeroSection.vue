@@ -15,21 +15,21 @@
         </div>
       </div>
     </div>
-    <div class="hero-accent">
+    <div class="hero-accent" style="opacity: 0; transform: translateY(10px);">
       <div class="line" />
       <p>DEVELOPER</p>
       <div class="line line-reverse" />
     </div>
-    <div class="hero-dev-name">
+    <div class="hero-dev-name" style="opacity: 0; transform: translateY(10px);">
       <p>MrBobertus</p>
     </div>
-    <div class="hero-notation-points">
+    <div class="hero-notation-points" style="opacity: 0; transform: translateY(10px);">
       <Terminal :size="16" />
       <p>{{ mottoText }}</p><span class="hero-notation-point-cursor">_</span>
     </div>
-    <div class="button-div">
-      <button class="button1">PROJEKTE ANSEHEN</button>
-      <button class="button2">KONTAKT AUFNEHMEN</button>
+    <div class="button-div" style="opacity: 0; transform: translateY(10px);">
+      <button @click="emit('scroll-to-projects')" class="button1">PROJEKTE ANSEHEN</button>
+      <button @click="emit('scroll-to-contact')" class="button2">KONTAKT AUFNEHMEN</button>
     </div>
     <div class="scroll-notice">
       <Mouse :size="22" />
@@ -40,6 +40,8 @@
 <script setup>
   import { ref, onMounted } from 'vue'
   import { Terminal, Mouse } from 'lucide-vue-next'
+
+  const emit = defineEmits(['scroll-to-projects','scroll-to-contact'])
 
   const mottoText = ref('')
   const fullText = "Entwicklung. Innovation. Präzision."
@@ -56,7 +58,9 @@
       }
     }
 
-    typeWriter()
+    setTimeout(() => {
+      typeWriter()
+    }, 1800)
   })
 </script>
 
@@ -159,7 +163,8 @@
   font-family: var(--font-mono);
   font-size: 0.65rem;
   margin-top: 1rem;
-  opacity: 0; 
+  animation: slide 0.5s forwards;
+  animation-delay: 0.8s;
 }
 
 .hero-dev-name {
@@ -168,6 +173,8 @@
   padding: 0;
   font-weight: 300;
   font-size: 1.5rem;
+  animation: slide 0.5s forwards;
+  animation-delay: 1.2s;
 }
 
 .hero-dev-name p {
@@ -190,6 +197,8 @@
   color: var(--text-tertiary);
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
+  animation: slide 0.5s forwards;
+  animation-delay: 1.4s;
 }
 
 .hero-notation-points p {
@@ -203,6 +212,8 @@
 
 .button-div {
   margin-top: 2rem;
+  animation: slide 0.5s forwards;
+  animation-delay: 1.8s;
 }
 
 .button1 {
