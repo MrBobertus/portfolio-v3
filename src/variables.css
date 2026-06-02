@@ -83,14 +83,21 @@
   }
 }
 
-@keyframes slide {
+@keyframes slideVertical {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes HoverEffect {
+@keyframes slideHorizontal {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hover {
   0%, 100% {
     transform: translateY(0);
   }

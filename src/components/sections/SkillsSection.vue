@@ -123,6 +123,15 @@
     padding: 2.2rem;
     margin: 0;
     gap: 1rem;
+    transition: all 0.4s ease;
+  }
+
+  .skill-container:hover {
+    border: 1px solid var(--border-hover);
+  }
+
+  .skill-container:hover .skill-container-icon {
+    border: 1px solid var(--accent);
   }
 
   .skill-container-header {
@@ -145,8 +154,9 @@
     align-items: center;
     justify-content: center;
     color: var(--accent);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--accent-glow);
     padding: 0.5rem;
+    transition: all 0.4s ease;
   }
 
   .skill-container-title {
@@ -173,11 +183,22 @@
     text-align: center;
     padding: 0.5rem;
     margin: 0;
+    transition: all 0.4s ease;
+  }
+
+  .skill-name:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent-light);
   }
 
   .skill-icon {
     color: var(--text-tertiary);
     margin-right: 0.5rem;
+    transition: all 0.4s ease;
+  }
+
+  .skill-name:hover .skill-icon {
+    color: var(--accent-light);
   }
 
   .skill-list {

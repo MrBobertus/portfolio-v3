@@ -11,8 +11,8 @@
         <div class="box-top-left"></div>
         <div class="box-bottom-right"></div>
         <div class="button-menu">
-          <button class="button1"><FileCode :size="16" /></button>
-          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
+          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
         </div>
         <p class="project-number">01</p>
         <p class="project-title">Dashboard</p>
@@ -28,8 +28,8 @@
         <div class="box-top-left"></div>
         <div class="box-bottom-right"></div>
         <div class="button-menu">
-          <button class="button1"><FileCode :size="16" /></button>
-          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
+          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
         </div>
         <p class="project-number">01</p>
         <p class="project-title">Dashboard</p>
@@ -45,8 +45,8 @@
         <div class="box-top-left"></div>
         <div class="box-bottom-right"></div>
         <div class="button-menu">
-          <button class="button1"><FileCode :size="16" /></button>
-          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
+          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
         </div>
         <p class="project-number">01</p>
         <p class="project-title">Dashboard</p>
@@ -62,8 +62,8 @@
         <div class="box-top-left"></div>
         <div class="box-bottom-right"></div>
         <div class="button-menu">
-          <button class="button1"><FileCode :size="16" /></button>
-          <button class="button1"><SquareArrowOutUpRight :size="16" /></button>
+          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
+          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
         </div>
         <p class="project-number">01</p>
         <p class="project-title">Dashboard</p>
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <button class="button2">ALLE PROJEKTE<ExternalLink :size="16" /></button>
+    <a href="https://github.com/MrBobertus?tab=repositories" class="button2">ALLE PROJEKTE<ExternalLink :size="16" /></a>
   </div>
 </template>
 
@@ -139,6 +139,15 @@
     padding: 2rem;
     margin: 0;
     gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .project-box:hover {
+    border: 1px solid var(--accent);
+  }
+
+  .project-box:hover .button-menu {
+    opacity: 1;
   }
 
   .project-number {
@@ -196,6 +205,7 @@
   }
 
   .button-menu {
+    opacity: 0;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -203,6 +213,7 @@
     top: 0;
     right: 0;
     margin: 1rem;
+    transition: all 0.2s ease;
   }
 
   .button1 {
@@ -211,7 +222,7 @@
     background: none;
     border: 1px solid var(--border);
     font-family: var(--font-mono);
-    color: var(--text-secondary);
+    color: var(--text-tertiary);
     font-size: 0.8rem;
     margin: 0;
     padding: 0.6rem;
@@ -220,7 +231,7 @@
 
   .button1:hover {
     cursor: pointer;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     border: 1px solid var(--accent);
   }
 
@@ -236,6 +247,7 @@
     margin-top: 2rem;
     padding: 0.6rem 2rem;
     transition: all 0.2s ease;
+    text-decoration: none;
   }
 
   .button2:hover {

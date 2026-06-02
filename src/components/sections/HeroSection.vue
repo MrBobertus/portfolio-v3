@@ -163,7 +163,7 @@
   font-family: var(--font-mono);
   font-size: 0.65rem;
   margin-top: 1rem;
-  animation: slide 0.5s forwards;
+  animation: slideVertical 0.5s forwards;
   animation-delay: 0.8s;
 }
 
@@ -173,7 +173,7 @@
   padding: 0;
   font-weight: 300;
   font-size: 1.5rem;
-  animation: slide 0.5s forwards;
+  animation: slideVertical 0.5s forwards;
   animation-delay: 1.2s;
 }
 
@@ -197,7 +197,7 @@
   color: var(--text-tertiary);
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
-  animation: slide 0.5s forwards;
+  animation: slideVertical 0.5s forwards;
   animation-delay: 1.4s;
 }
 
@@ -212,7 +212,7 @@
 
 .button-div {
   margin-top: 2rem;
-  animation: slide 0.5s forwards;
+  animation: slideVertical 0.5s forwards;
   animation-delay: 1.8s;
 }
 
@@ -260,7 +260,7 @@
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 300;
-  animation: HoverEffect 5s ease-in-out infinite;
+  animation: hover 5s ease-in-out infinite;
 }
 
 .line {
