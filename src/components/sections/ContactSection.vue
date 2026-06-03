@@ -36,21 +36,23 @@
         </div>
       </div>
       <div class="contact-section-formular">
-        <form class="contact-formular">
+        <form class="contact-formular" @submit.prevent="submitForm">
+          <input type="hidden" name="access_key" value="b8adfb1e-c921-4d6f-ad3f-1ac6f2c753bb">
           <div class="contact-data-inputs">
             <div class="contact-name-input">
               <label>NAME</label>
-              <input placeholder="Max Mustermann" />
+              <input type="text" name="name" placeholder="Max Mustermann" required />
             </div>
             <div class="contact-email-input">
               <label>E-MAIL</label>
-              <input placeholder="maxmustermann@mail.com" />
+              <input type="email" name="email" placeholder="maxmustermann@mail.com" required />
             </div>
           </div>
           <div class="contact-message-input">
             <label>Nachricht</label>
-            <textarea rows="6" placeholder="Erzähle mir mehr von ..."></textarea>
+            <textarea name="message" rows="6" placeholder="Erzähle mir mehr von ..." required></textarea>
           </div>
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
           <button class="button1"><Send :size="16" />NACHRICHT SENDEN</button>
         </form>
       </div>
@@ -60,6 +62,18 @@
 
 <script setup>
   import { ArrowUpRight, Send, Mail, Map} from 'lucide-vue-next'
+
+  const submitForm = async (event) => {
+    const formData = new FormData(event.target)
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    if (response.ok) {
+      alert('Danke für Ihr Interesse!')
+      event.target.reset()
+    }
+  }
 </script>
 
 <style scoped>

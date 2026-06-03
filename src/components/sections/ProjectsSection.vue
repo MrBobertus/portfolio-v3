@@ -7,72 +7,19 @@
     <p class="projects-title">Ausgewählte <span class="projects-title-keyword">Arbeiten</span>?</p>
     <p class="projects-explanation">Eine Auswahl meiner besten Projekte. Von Unternehmenslösungen bis hin zu innovativen Experimenten.</p>
     <div class="project-list">
-      <div class="project-box">
+      <div v-for="(repo, index) in repos" :key="repo.id" class="project-box">
         <div class="box-top-left"></div>
         <div class="box-bottom-right"></div>
         <div class="button-menu">
-          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
-          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
+          <a :href="repo.html_url" target="_blank" id="source-code-button" class="button1"><FileCode :size="16" /></a>
+          <a :href="livePages[repo.name]" v-if="livePages[repo.name]" target="_blank" id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></a>
         </div>
-        <p class="project-number">01</p>
-        <p class="project-title">Dashboard</p>
-        <p class="project-class">SAAS PLAFTFORM</p>
-        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
+        <p class="project-number">{{ String(index + 1).padStart(2, '0') }}</p>
+        <p class="project-title">{{ repo.name }}</p>
+        <p class="project-class">{{ repo.license?.name ?? 'Keine Lizenz' }}</p>
+        <p class="project-description">{{ repo.description }}</p>
         <div class="project-tech-list">
-          <p>VUE.js</p>
-          <p>Python</p>
-          <p>Javascript</p>
-        </div>
-      </div>
-      <div class="project-box">
-        <div class="box-top-left"></div>
-        <div class="box-bottom-right"></div>
-        <div class="button-menu">
-          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
-          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
-        </div>
-        <p class="project-number">01</p>
-        <p class="project-title">Dashboard</p>
-        <p class="project-class">SAAS PLAFTFORM</p>
-        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
-        <div class="project-tech-list">
-          <p>VUE.js</p>
-          <p>Python</p>
-          <p>Javascript</p>
-        </div>
-      </div>
-      <div class="project-box">
-        <div class="box-top-left"></div>
-        <div class="box-bottom-right"></div>
-        <div class="button-menu">
-          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
-          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
-        </div>
-        <p class="project-number">01</p>
-        <p class="project-title">Dashboard</p>
-        <p class="project-class">SAAS PLAFTFORM</p>
-        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
-        <div class="project-tech-list">
-          <p>VUE.js</p>
-          <p>Python</p>
-          <p>Javascript</p>
-        </div>
-      </div>
-      <div class="project-box">
-        <div class="box-top-left"></div>
-        <div class="box-bottom-right"></div>
-        <div class="button-menu">
-          <button id="source-code-button" class="button1"><FileCode :size="16" /></button>
-          <button id="showcase-button" class="button1"><SquareArrowOutUpRight :size="16" /></button>
-        </div>
-        <p class="project-number">01</p>
-        <p class="project-title">Dashboard</p>
-        <p class="project-class">SAAS PLAFTFORM</p>
-        <p class="project-description">Eine moderne Analytics-Dashboard-Plattform mit Echtzeit-Datenvisualisierung, anpassbaren Widgets und rollenbasiertem Zugriffsmanagement.</p>
-        <div class="project-tech-list">
-          <p>VUE.js</p>
-          <p>Python</p>
-          <p>Javascript</p>
+          <p v-for="tag in repoTags[repo.name]">{{ tag }}</p>
         </div>
       </div>
     </div>
@@ -82,6 +29,28 @@
 
 <script setup>
   import { ArrowUpRight, SquareArrowOutUpRight, FileCode, ExternalLink } from 'lucide-vue-next'
+  import { ref, onMounted } from 'vue'
+
+  const livePages = {
+    'MrBobertus.github.io': 'https://mrbobertus.github.io'
+  }
+  const repoTags = {
+    'b.l.o.b.': ['Python'],
+    'cs-go-lootbox': ['HTML', 'CSS', 'JavaScript'],
+    'MrBobertus.github.io': [],
+    'picsart-debugging-api-tool': ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
+    'portfolio-v1': ['HTML', 'CSS', 'JavaScript'],
+    'portfolio-v2': ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
+    'project-execution': ['Python']
+  }
+
+  const repos = ref([])
+
+  onMounted(async () => {
+    const response = await fetch('https://api.github.com/users/MrBobertus/repos')
+    const data = await response.json()
+    repos.value = data.splice(0,9)
+  })
 </script>
 
 <style scoped>
@@ -122,7 +91,7 @@
   .project-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 2rem;
   }
@@ -132,8 +101,9 @@
     position: relative;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
     flex: 1;
+    height: 100%;
     background: var(--bg-secondary);
     border: 1px solid var(--border-hover);
     padding: 2rem;
@@ -144,6 +114,15 @@
 
   .project-box:hover {
     border: 1px solid var(--accent);
+  }
+
+  .project-box:hover .box-top-left {
+    opacity: 0;
+  }
+
+
+  .project-box:hover .box-bottom-right {
+    opacity: 0;
   }
 
   .project-box:hover .button-menu {
@@ -201,6 +180,7 @@
     background: var(--bg-primary);
     border: 1px solid var(--border);
     padding: 0.5rem 1rem;
+    white-space: nowrap;
     margin: 0;
   }
 
@@ -264,6 +244,7 @@
     width: 10px;
     border-top: 1px solid var(--accent);
     border-left: 1px solid var(--accent);
+    transition: all 0.4s ease;
   }
   .box-bottom-right {
     position: absolute;
@@ -273,6 +254,7 @@
     width: 10px;
     border-bottom: 1px solid var(--accent);
     border-right: 1px solid var(--accent);
+    transition: all 0.4s ease;
   }
 
   .line {
