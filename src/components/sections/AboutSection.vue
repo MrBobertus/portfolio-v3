@@ -164,6 +164,22 @@
     padding: 0;
     margin: 0;
     gap: 1rem;
+    transition: all 0.4s ease;
+  }
+
+  .aboutme-stats-field:has(+ .aboutme-stats-field:hover) {
+    transform: scale(1.06);
+    z-index: 9;
+  }
+
+  .aboutme-stats:hover .aboutme-stats-field:hover {
+    transform: scale(1.2);
+    z-index: 99;
+  }
+
+  .aboutme-stats-field:hover + .aboutme-stats-field {
+    transform: scale(1.06);
+    z-index: 9;
   }
 
   .stat-value {
@@ -200,6 +216,13 @@
     border: 1px solid var(--border-hover);
     padding: 2rem;
     gap: 0.8rem;
+    transition: all 0.4s ease;
+  }
+  
+  .keypoint:hover {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    transform: scale(1.1);
   }
 
   .keypoint-icon {
