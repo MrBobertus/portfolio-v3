@@ -8,20 +8,17 @@
       <p class="aboutme-question">Wer steckt hinter <span class="aboutme-studio-name">MRB Labs</span>?</p>
       <div class="aboutme-question-answer">
         <p>
-              Ich bin <span class="aboutme-developer-name">MrBobertus</span>, ein leidenschaftlicher
-              Softwareentwickler mit Fokus auf moderne Webtechnologien. MRB Labs ist mein
-              persönliches Studio für digitale Lösungen — ein Ort wo Technologie auf Design trifft.
-            </p>
-            <p>
-              Meine Stärke liegt in der Kombination aus technischer Exzellenz und ästhetischem
-              Feingefühl. Jedes Projekt wird mit derselben Präzision und Leidenschaft angegangen,
-              egal ob es sich um eine komplexe Unternehmensanwendung oder ein minimalistisches
-              Portfolio handelt.
-            </p>
-            <p>
-              Ich glaube an sauberen Code, durchdachte Architektur und Designs die nicht nur
-              gut aussehen, sondern auch intuitiv funktionieren.
-            </p>
+          Ich bin <span class="aboutme-developer-name">MrBobertus</span>, ein Entwickler mit Leidenschaft für kreative und praktische Lösungen. Mit MRB Labs habe ich einen Ort geschaffen, an dem Ideen nicht nur Konzepte bleiben, sondern zu echten Projekten werden.
+        </p>
+
+        <p>
+          Besonders wichtig sind mir Anpassungsfähigkeit, die Bereitschaft ständig Neues zu lernen und die Motivation, mich immer weiterzuentwickeln. Viele meiner Fähigkeiten habe ich mir durch eigene Projekte angeeignet, von kleinen Experimenten bis hin zu größeren Anwendungen wie diesem Portfolio, das vollständig ohne KI-generierten Code entwickelt wurde.
+        </p>
+
+        <p>
+          Für mich ist Entwicklung ein kontinuierlicher Prozess. Herausforderungen gehören dazu, Fehler ebenso. Statt daran zu scheitern, nutze ich sie als Möglichkeit, besser zu werden und neue Wege zu entdecken. Mit genügend Neugier, Ausdauer und Zeit lassen sich oft Lösungen finden, die anfangs unmöglich wirken.
+        </p>
+        <strong>"Ideen sind nur der Anfang. Erst durch Ausprobieren, Fehler und Verbesserungen werden sie Realität." ~ich</strong>
       </div>
       <div class="aboutme-stats">
         <div class="aboutme-stats-field">
@@ -50,35 +47,44 @@
         </div>
       </div>
     </div>
-    <div class="aboutme-section2">
-      <div class="aboutme-keypoints">
-        <div class="keypoint">
-          <Terminal :size="16" class="keypoint-icon" />
-          <p class="keypoint-title">Clean Code</p>
-          <p class="keypoint-info">Strukturierter, wartbarer Code der Standards folgt.</p>
-        </div>
-        <div class="keypoint">
-          <Terminal :size="16" class="keypoint-icon" />
-          <p class="keypoint-title">Clean Code</p>
-          <p class="keypoint-info">Strukturierter, wartbarer Code der Standards folgt.</p>
-        </div>
-        <div class="keypoint">
-          <Terminal :size="16" class="keypoint-icon" />
-          <p class="keypoint-title">Clean Code</p>
-          <p class="keypoint-info">Strukturierter, wartbarer Code der Standards folgt.</p>
-        </div>
-        <div class="keypoint">
-          <Terminal :size="16" class="keypoint-icon" />
-          <p class="keypoint-title">Clean Code</p>
-          <p class="keypoint-info">Strukturierter, wartbarer Code der Standards folgt.</p>
-        </div>
-      </div>
+<div class="aboutme-section2">
+  <div class="aboutme-keypoints">
+    <div class="keypoint">
+      <Lightbulb :size="16" class="keypoint-icon" />
+      <p class="keypoint-title">Ideen umsetzen</p>
+      <p class="keypoint-info">
+        Gute Ideen haben viele. Ich glaube daran, sie tatsächlich zu bauen.
+      </p>
     </div>
+    <div class="keypoint">
+      <Rocket :size="16" class="keypoint-icon" />
+      <p class="keypoint-title">Ständig lernen</p>
+      <p class="keypoint-info">
+        Jede neue Technologie ist eine Chance, etwas Neues zu entdecken.
+      </p>
+    </div>
+    <div class="keypoint">
+      <Wrench :size="16" class="keypoint-icon" />
+      <p class="keypoint-title">Probleme lösen</p>
+      <p class="keypoint-info">
+        Entwicklung bedeutet für mich, Herausforderungen in Lösungen zu verwandeln.
+      </p>
+    </div>
+    <div class="keypoint">
+      <TrendingUp :size="16" class="keypoint-icon" />
+      <p class="keypoint-title">Kontinuierliche Verbesserung</p>
+      <p class="keypoint-info">
+        Fehler sind kein Rückschritt, sondern Teil des Fortschritts.
+      </p>
+    </div>
+
+  </div>
+</div>
   </div>
 </template>
 
 <script setup>
-  import { Terminal } from 'lucide-vue-next'
+  import { Lightbulb,Rocket,Wrench,TrendingUp } from 'lucide-vue-next'
 </script>
 
 <style scoped>

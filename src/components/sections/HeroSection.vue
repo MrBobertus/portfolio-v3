@@ -93,12 +93,14 @@
   padding: 0.4rem;
   margin-top: 0.5rem;
   opacity: 0; transform: scale(0.9); animation: scaleInAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s ease-in-out; 
 }
 
 .hero-title-middle-box {
   background: none;
   position: relative;
   padding: 0.4rem;
+  transition: all 0.4s ease-in-out;
 }
 
 .box-top-left {
@@ -186,6 +188,7 @@
   color: var(--bg-primary);
   text-shadow: -1px -1px 0 var(--accent-light), 1px -1px 0 var(--accent-light), -1px 1px 0 var(--accent-light), 1px 1px 0 var(--accent-light);
   margin-left: 1rem;
+  transition: all 0.4s ease-in-out;
 }
 
 .hero-notation-points {

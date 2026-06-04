@@ -120,7 +120,6 @@
     opacity: 0;
   }
 
-
   .project-box:hover .box-bottom-right {
     opacity: 0;
   }

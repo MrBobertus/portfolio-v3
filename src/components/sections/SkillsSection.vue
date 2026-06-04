@@ -9,55 +9,55 @@
       <div class="skill-container-list">
         <div class="skill-container">
           <div class="skill-container-header">
-            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-icon"><Monitor :size="16" /></div>
             <div class="skill-container-header-text">
               <p class="skill-container-title">FRONTEND</p>
               <p class="skill-container-info">Moderne, performante Interfaces</p>
             </div>
           </div>
           <div class="skill-list">
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Tailwind CSS</p>
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Vue.js</p>
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />HTML / CSS / JS</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Tailwind CSS</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Vue.js</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />HTML / CSS / JS</p>
           </div>
         </div>
         <div class="skill-container">
           <div class="skill-container-header">
-            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-icon"><Server :size="16" /></div>
             <div class="skill-container-header-text">
               <p class="skill-container-title">BACKEND</p>
               <p class="skill-container-info">Robuste API's & Datenbanken</p>
             </div>
           </div>
           <div class="skill-list">
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Node.js</p>
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Python</p>
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Lua</p>
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Java</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Node.js</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Python</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Lua</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Java</p>
           </div>
         </div>
         <div class="skill-container">
           <div class="skill-container-header">
-            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-icon"><Workflow :size="16" /></div>
             <div class="skill-container-header-text">
               <p class="skill-container-title">TOOLS & DEVOPS</p>
               <p class="skill-container-info">Workflows & Infrastruktur</p>
             </div>
           </div>
           <div class="skill-list">
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Git / Github</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Git / Github</p>
           </div>
         </div>
         <div class="skill-container">
           <div class="skill-container-header">
-            <div class="skill-container-icon"><CodeXml :size="16" /></div>
+            <div class="skill-container-icon"><Palette :size="16" /></div>
             <div class="skill-container-header-text">
               <p class="skill-container-title">DESIGN</p>
               <p class="skill-container-info">UI/UX & Visuelle Systeme</p>
             </div>
           </div>
           <div class="skill-list">
-            <p class="skill-name"><CodeXml :size="16" class="skill-icon" />Adobe Suite</p>
+            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Adobe Suite</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-  import { CodeXml } from 'lucide-vue-next'
+  import { Monitor,Server,Workflow,Palette,Diamond } from 'lucide-vue-next'
 </script>
 
 <style scoped>
