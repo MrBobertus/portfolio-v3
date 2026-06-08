@@ -382,4 +382,48 @@
     width: 3.2rem;
     background: linear-gradient(to right, transparent, rgba(139, 0, 0, 0.5));
   }
+
+  @media (max-width: 768px) {
+    .contact {
+      height: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .contact-title {
+      font-size: 1.8rem;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      width: 100%;
+    }
+
+    .contact-section-formular {
+      width: 100%;
+    }
+
+    .contact-formular {
+      gap: 1.5rem;
+    }
+
+    .contact-data-inputs {
+      flex-direction: column;
+      width: 100%;
+      gap: 1.5rem;
+    }
+
+    .contact-name-input, .contact-email-input, .contact-message-input {
+      width: 100%;
+    }
+
+    .contact-box-title {
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+  }
 </style>

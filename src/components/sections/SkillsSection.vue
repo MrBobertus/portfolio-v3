@@ -6,61 +6,61 @@
     </div>
     <p class="skill-title">Die <span class="skill-title-keyword">Technologien</span> mit den ich arbeite.</p>
     <p class="skill-explanation">Hier ist eine Auswahl der Technologien und Tools, mit denen ich Projekte entwickle und zum Leben erwecke.</p>
-      <div class="skill-container-list">
-        <div class="skill-container">
-          <div class="skill-container-header">
-            <div class="skill-container-icon"><Monitor :size="16" /></div>
-            <div class="skill-container-header-text">
-              <p class="skill-container-title">FRONTEND</p>
-              <p class="skill-container-info">Moderne, performante Interfaces</p>
-            </div>
-          </div>
-          <div class="skill-list">
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Tailwind CSS</p>
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Vue.js</p>
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />HTML / CSS / JS</p>
+    <div class="skill-container-list">
+      <div class="skill-container">
+        <div class="skill-container-header">
+          <div class="skill-container-icon"><Monitor :size="16" /></div>
+          <div class="skill-container-header-text">
+            <p class="skill-container-title">FRONTEND</p>
+            <p class="skill-container-info">Moderne, performante Interfaces</p>
           </div>
         </div>
-        <div class="skill-container">
-          <div class="skill-container-header">
-            <div class="skill-container-icon"><Server :size="16" /></div>
-            <div class="skill-container-header-text">
-              <p class="skill-container-title">BACKEND</p>
-              <p class="skill-container-info">Robuste API's & Datenbanken</p>
-            </div>
-          </div>
-          <div class="skill-list">
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Node.js</p>
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Python</p>
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Lua</p>
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Java</p>
-          </div>
-        </div>
-        <div class="skill-container">
-          <div class="skill-container-header">
-            <div class="skill-container-icon"><Workflow :size="16" /></div>
-            <div class="skill-container-header-text">
-              <p class="skill-container-title">TOOLS & DEVOPS</p>
-              <p class="skill-container-info">Workflows & Infrastruktur</p>
-            </div>
-          </div>
-          <div class="skill-list">
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Git / Github</p>
-          </div>
-        </div>
-        <div class="skill-container">
-          <div class="skill-container-header">
-            <div class="skill-container-icon"><Palette :size="16" /></div>
-            <div class="skill-container-header-text">
-              <p class="skill-container-title">DESIGN</p>
-              <p class="skill-container-info">UI/UX & Visuelle Systeme</p>
-            </div>
-          </div>
-          <div class="skill-list">
-            <p class="skill-name"><Diamond :size="12" class="skill-icon" />Adobe Suite</p>
-          </div>
+        <div class="skill-list">
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Tailwind CSS</p>
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Vue.js</p>
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />HTML / CSS / JS</p>
         </div>
       </div>
+      <div class="skill-container">
+        <div class="skill-container-header">
+          <div class="skill-container-icon"><Server :size="16" /></div>
+          <div class="skill-container-header-text">
+            <p class="skill-container-title">BACKEND</p>
+            <p class="skill-container-info">Robuste API's & Datenbanken</p>
+          </div>
+        </div>
+        <div class="skill-list">
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Node.js</p>
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Python</p>
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Lua</p>
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Java</p>
+        </div>
+      </div>
+      <div class="skill-container">
+        <div class="skill-container-header">
+          <div class="skill-container-icon"><Workflow :size="16" /></div>
+          <div class="skill-container-header-text">
+            <p class="skill-container-title">TOOLS & DEVOPS</p>
+            <p class="skill-container-info">Workflows & Infrastruktur</p>
+          </div>
+        </div>
+        <div class="skill-list">
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Git / Github</p>
+        </div>
+      </div>
+      <div class="skill-container">
+        <div class="skill-container-header">
+          <div class="skill-container-icon"><Palette :size="16" /></div>
+          <div class="skill-container-header-text">
+            <p class="skill-container-title">DESIGN</p>
+            <p class="skill-container-info">UI/UX & Visuelle Systeme</p>
+          </div>
+        </div>
+        <div class="skill-list">
+          <p class="skill-name"><Diamond :size="12" class="skill-icon" />Adobe Suite</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -213,5 +213,25 @@
     height: 3px;
     width: 3.2rem;
     background: linear-gradient(to right, transparent, rgba(139, 0, 0, 0.5));
+  }
+
+  @media (max-width: 768px) {
+    .skills {
+      padding: 3rem 1.5rem;
+    }
+
+    .skill-title {
+      font-size: 1.8rem;
+    }
+
+    .skill-container-list {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+    }
+
+    .skill-container {
+      padding: 1.5rem;
+    }
   }
 </style>

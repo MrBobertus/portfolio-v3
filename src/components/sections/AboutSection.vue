@@ -47,39 +47,38 @@
         </div>
       </div>
     </div>
-<div class="aboutme-section2">
-  <div class="aboutme-keypoints">
-    <div class="keypoint">
-      <Lightbulb :size="16" class="keypoint-icon" />
-      <p class="keypoint-title">Ideen umsetzen</p>
-      <p class="keypoint-info">
-        Gute Ideen haben viele. Ich glaube daran, sie tatsächlich zu bauen.
-      </p>
+    <div class="aboutme-section2">
+      <div class="aboutme-keypoints">
+        <div class="keypoint">
+          <Lightbulb :size="16" class="keypoint-icon" />
+          <p class="keypoint-title">Ideen umsetzen</p>
+          <p class="keypoint-info">
+            Gute Ideen haben viele. Ich glaube daran, sie tatsächlich zu bauen.
+          </p>
+        </div>
+        <div class="keypoint">
+          <Rocket :size="16" class="keypoint-icon" />
+          <p class="keypoint-title">Ständig lernen</p>
+          <p class="keypoint-info">
+            Jede neue Technologie ist eine Chance, etwas Neues zu entdecken.
+          </p>
+        </div>
+        <div class="keypoint">
+          <Wrench :size="16" class="keypoint-icon" />
+          <p class="keypoint-title">Probleme lösen</p>
+          <p class="keypoint-info">
+            Entwicklung bedeutet für mich, Herausforderungen in Lösungen zu verwandeln.
+          </p>
+        </div>
+        <div class="keypoint">
+          <TrendingUp :size="16" class="keypoint-icon" />
+          <p class="keypoint-title">Kontinuierliche Verbesserung</p>
+          <p class="keypoint-info">
+            Fehler sind kein Rückschritt, sondern Teil des Fortschritts.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="keypoint">
-      <Rocket :size="16" class="keypoint-icon" />
-      <p class="keypoint-title">Ständig lernen</p>
-      <p class="keypoint-info">
-        Jede neue Technologie ist eine Chance, etwas Neues zu entdecken.
-      </p>
-    </div>
-    <div class="keypoint">
-      <Wrench :size="16" class="keypoint-icon" />
-      <p class="keypoint-title">Probleme lösen</p>
-      <p class="keypoint-info">
-        Entwicklung bedeutet für mich, Herausforderungen in Lösungen zu verwandeln.
-      </p>
-    </div>
-    <div class="keypoint">
-      <TrendingUp :size="16" class="keypoint-icon" />
-      <p class="keypoint-title">Kontinuierliche Verbesserung</p>
-      <p class="keypoint-info">
-        Fehler sind kein Rückschritt, sondern Teil des Fortschritts.
-      </p>
-    </div>
-
-  </div>
-</div>
   </div>
 </template>
 
@@ -267,5 +266,39 @@
     height: 3px;
     width: 3.2rem;
     background: linear-gradient(to right, transparent, rgba(139, 0, 0, 0.5));
+  }
+
+  @media (max-width: 768px) {
+    .aboutme {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .aboutme-section1 {
+      padding: 3rem 1.5rem;
+    }
+
+    .aboutme-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .aboutme-stats-field:hover,
+    .aboutme-stats:hover .aboutme-stats-field:hover,
+    .aboutme-stats-field:has(+ .aboutme-stats-field:hover),
+    .aboutme-stats-field:hover + .aboutme-stats-field {
+      transform: none !important;
+    }
+
+    .aboutme-keypoints {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+      gap: 1.5rem;
+    }
+
+    .keypoint:hover {
+      transform: none !important;
+    }
   }
 </style>
