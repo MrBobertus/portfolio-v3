@@ -101,4 +101,18 @@
   background-color: var(--accent-light); 
   mask: url(../../assets/logo.svg) no-repeat center / contain;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
 </style>

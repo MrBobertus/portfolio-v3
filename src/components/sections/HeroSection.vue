@@ -283,4 +283,60 @@
   background-color: var(--accent-light);
   animation: blink 2s infinite;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-title-accent {
+    margin-left: 0.5rem;
+  }
+
+  .hero-title-inner-box {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .hero-dev-name {
+    font-size: 1.2rem;
+  }
+
+  .hero-notation-points {
+    font-size: 0.65rem; 
+    letter-spacing: 0.05rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 1.5rem;
+  }
+
+  .button1, .button2 {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1rem; 
+    box-sizing: border-box;
+  }
+
+  .button2 {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .scroll-notice {
+    bottom: 1.5rem;
+  }
+}
 </style>

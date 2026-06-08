@@ -261,4 +261,34 @@
     width: 3.2rem;
     background: linear-gradient(to right, transparent, rgba(139, 0, 0, 0.5));
   }
+
+  @media (max-width: 768px) {
+    .project-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: start;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .projects {
+      padding: 2rem;
+    }
+
+    .button-menu {
+      opacity: 1; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: start;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
 </style>
