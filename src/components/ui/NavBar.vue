@@ -188,8 +188,8 @@ nav button:hover {
     width: 100vw;
     height: 100vh;
     background-color: rgba(10, 10, 10, 0.75) !important;
-    backdrop-filter: blur(4px) !important;
     -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(4px) !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
