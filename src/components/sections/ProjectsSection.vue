@@ -34,22 +34,25 @@
   const livePages = {
     'MrBobertus.github.io': 'https://mrbobertus.github.io'
   }
-  const repoTags = {
-    'b.l.o.b.': ['Python'],
-    'cs-go-lootbox': ['HTML', 'CSS', 'JavaScript'],
-    'MrBobertus.github.io': [],
-    'picsart-debugging-api-tool': ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
-    'portfolio-v1': ['HTML', 'CSS', 'JavaScript'],
-    'portfolio-v2': ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
-    'project-execution': ['Python']
-  }
-
+  const repoTags = ref({})
   const repos = ref([])
 
   onMounted(async () => {
-    const response = await fetch('https://api.github.com/users/MrBobertus/repos')
-    const data = await response.json()
+    const repoResponse = await fetch('https://api.github.com/users/MrBobertus/repos')
+    const data = await repoResponse.json()
     repos.value = data.splice(0,9)
+
+    const langResults = await Promise.all(
+      repos.value.map(repo =>
+        fetch(`https://api.github.com/repos/MrBobertus/${repo.name}/languages`)
+          .then(res => res.json())
+          .then(langs => ({ name: repo.name, tags: Object.keys(langs) }))
+      )
+    )
+
+    langResults.forEach(({ name, tags }) => {
+      repoTags.value[name] = tags
+    })
   })
 </script>
 
