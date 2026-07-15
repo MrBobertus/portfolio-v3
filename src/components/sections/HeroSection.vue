@@ -1,9 +1,5 @@
 <template>
   <div class="hero">
-    <div class="hero-welcome-message">
-      <div class="dot" />
-      <p>WILLKOMMEN, NUTZER.</p>
-    </div>
     <div class="hero-title-outer-box">
       <div class="hero-title-middle-box">
         <div class="box-top-left"></div>
@@ -72,19 +68,6 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-}
-
-.hero-welcome-message {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-tertiary);
-  font-size: 0.6rem;
-  text-align: left;
-  font-family: var(--font-main);
-  margin: 0;
-  padding: 0;
 }
 
 .hero-title-outer-box {
@@ -274,14 +257,6 @@
 
 .line-reverse {
   transform: scaleX(-1);
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-light);
-  animation: blink 2s infinite;
 }
 
 @media (max-width: 768px) {
