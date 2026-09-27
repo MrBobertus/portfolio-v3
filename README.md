@@ -1,5 +1,7 @@
-# Vue 3 + Vite
+# portfolio-v3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+My last personal portfolio website that i built with Vue.js
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+**Note:** This repository is archived and represents an earlier stage of my web development journey. It is no longer maintained and does not reflect my current coding practices or skill level.
+
+Made in i think start 2026 (something like march)
